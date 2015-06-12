@@ -1,0 +1,19 @@
+Rack defeni el vocabulario de alto nivel que el hardware y el software pueden usra para comunicarse
+Es un protocolo extremadamente simple que especifica como un servidor HTTP se comunica con un objeto de la aplicacion, como Sinatra::Application.
+El protocolo Rack en su nucleo especifica que la aplicacion objeto, o end-point, tiene que responder al el metodo call.
+El servidor, o handler, llamara a ese metodo con un parametro.
+Este parametro es un hsh que contiene toda la informacion relevantes sobre la peticion:
+Http verbo usado po rl apeticion
+ruta
+cabeceras
+http://rack.rubyforge.org
+
+
+El metodo retorna un array con tres elementos: status code, que vendra como un entero(integer, ej 200).
+un hash que contine todas las cabecers de la respuesta
+body object: necesario para comportarse como un array de strings-> responder a echa y llamar a los bloques con strings
+
+
+en sinatra el hash de la peticion estara disponible en el objeto request
+
+y response esta disponible para generar el array body

@@ -1,0 +1,12 @@
+get y post estan dentro de una instancia de la clase Sinatra::Application.
+
+Existe una superclase Sinatra::Base (subclase de Object)
+de la que Sinatra::Application es una subclase que hereda los metodos get y post.
+
+Los metodos get, post y demas son definidos dos veces:
+ una es hecha en Sinatra::Delegator que es una mezclada extension de Object.
+Otra en Sinatra::Application
+
+correr aplicacion sinatra desde irb
+Sinatra::Application.run!
+
